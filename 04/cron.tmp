@@ -1,0 +1,14 @@
+#ident	"@(#)root	1.21	04/03/23 SMI"
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+10 3 * * * /usr/sbin/logadm
+15 3 * * 0 /usr/lib/fs/nfs/nfsfind
+30 3 * * * [ -x /usr/lib/gss/gsscred_clean ] && /usr/lib/gss/gsscred_clean
+#
+# The rtc command is run to adjust the real time clock if and when 
+# daylight savings time changes.
+#
+1 2 * * * [ -x /usr/sbin/rtc ] && /usr/sbin/rtc -c > /dev/null 2>&1
+#10 3 * * * /usr/lib/krb5/kprop_script ___slave_kdcs___

@@ -1,0 +1,13 @@
+ora.CONFP.CONFPA.inst,ONLINE,ONLINE,dbserver1a
+ora.CONFP.CONFPB.inst,ONLINE,ONLINE,dbserver1b
+ora.CONFP.db,ONLINE,ONLINE,dbserver1a
+ora.dbserver1a.ASM1.asm,ONLINE,ONLINE,dbserver1a
+ora.dbserver1a.LISTENER_DBSERVER1A.lsnr,ONLINE,ONLINE,dbserver1a
+ora.dbserver1a.gsd,ONLINE,ONLINE,dbserver1a
+ora.dbserver1a.ons,ONLINE,ONLINE,dbserver1a
+ora.dbserver1a.vip,ONLINE,ONLINE,dbserver1a
+ora.dbserver1b.ASM2.asm,ONLINE,ONLINE,dbserver1b
+ora.dbserver1b.LISTENER_DBSERVER1B.lsnr,ONLINE,ONLINE,dbserver1b
+ora.dbserver1b.gsd,ONLINE,ONLINE,dbserver1b
+ora.dbserver1b.ons,ONLINE,ONLINE,dbserver1b
+ora.dbserver1b.vip,ONLINE,ONLINE,dbserver1b

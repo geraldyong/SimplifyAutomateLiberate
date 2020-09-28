@@ -1,0 +1,16 @@
+Name=Anderson
+Address=Fernvale Drive
+Age=32
+Department=Marketing
+Name=Joseph
+Address=Wellington Street
+Age=39
+Department=Finance
+Name=Sheldon
+Address=Bayshore Terraces
+Age=28
+Department=Marketing
+Name=Wilson
+Address=Corridale Residences
+Age=40
+Department=Sales

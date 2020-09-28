@@ -1,0 +1,73 @@
+#!/usr/local/bin/expect --
+
+# Checks if there are too many arguments.
+if { [llength $argv] > 1 } {
+  puts "Usage: user_pwchange oldpasswd"
+  exit 1
+} else {
+  set inoldpasswd  [lindex $argv 0]
+}
+
+# Sets up global parameters.
+set monthlist {"Dec" "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"}
+set host          [exec hostname]
+set username      [exec whoami]
+set currmonth     [string trimleft [timestamp -format %m] "0"]
+set currmonthyr   [string trimleft [timestamp -format %y] "0"]
+set prevmonthyr   $currmonthyr
+set prevmonth     [expr $currmonth - 1]
+set currmonthstr  [lindex $monthlist $currmonth]
+
+if {$prevmonth == 0} {
+  set prevmonth 12
+  decr prevmonthyr
+}
+set prevmonthstr  [lindex $monthlist $prevmonth]
+
+puts "Curr mth: $currmonthstr $currmonthyr"
+puts "Prev mth: $prevmonthstr $prevmonthyr"
+
+# Defines the passwords.
+set pwdtag   "sol1"
+set newpwd   "${pwdtag}@${currmonthstr}"
+
+if {![string match "" $inoldpasswd]} {
+  set oldpwd $inoldpasswd
+} else {
+  set oldpwd "${pwdtag}@${prevmonthstr}"
+}
+
+set timeout 5
+match_max 100000
+
+# Spawn password change process.
+spawn $env(SHELL)
+send "passwd\r"
+
+while 1 {
+  expect {
+    *Unknown* {
+      puts "\nWARNING: User $username not defined on $host."
+      exit 1
+    } timeout {
+      puts "\nWARNING: Unable to connect to $host."
+      exit 1
+    } "ew*assword" {
+      send "$newpwd\r"
+    } *existing* {
+      send "$oldpwd\r"
+    } "*nter login password*" {
+      send "$oldpwd\r"
+    } "urrent" {
+      send "$oldpwd\r"
+    } "Password" {
+      send "$oldpwd\r"
+    } denied {
+      puts "\nCRITICAL: Unable to change password for $username on $host."
+      exit 1
+    } successful {
+      puts "\npwchange: Done for $host."
+      exit 0
+    }
+  }
+}

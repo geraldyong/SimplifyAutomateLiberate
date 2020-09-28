@@ -1,0 +1,12 @@
+#!/bin/ksh
+#
+# Admin Assist Menu
+# (C) Gerald Yong 2010. All Rights Reserved. Written by Gerald Yong
+#
+# Last Updated:
+# 12 Mar 2009 - geraldy - Initial script.
+# 02 Jul 2009 - geraldy - Added new option to create folder only.
+# 23 Oct 2009 - geraldy - Added view menu.
+# 20 Nov 2009 - geraldy - Minor bugfix for server menu's listing.
+# 12 Dec 2009 - geraldy - Minor bugfix when adding new users to users list.
+# 27 May 2010 - geraldy - Included new code additions to allow specification of temporary dir.

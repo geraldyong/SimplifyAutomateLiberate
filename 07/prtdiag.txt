@@ -1,0 +1,44 @@
+System Configuration: VMware, Inc. VMware Virtual Platform
+BIOS Configuration: Phoenix Technologies LTD 6.00 09/18/2009
+
+==== Processor Sockets ====================================
+
+Version                          Location Tag
+-------------------------------- --------------------------
+Pentium(R) III                   CPU socket #0
+
+==== Memory Device Sockets ================================
+
+Type    Status Set Device Locator      Bank Locator
+------- ------ --- ------------------- --------------------
+DRAM    in use 0   RAM slot #0         RAM slot #0
+DRAM    in use 0   RAM slot #1         RAM slot #1
+DRAM    in use 0   RAM slot #2         RAM slot #2
+DRAM    empty  0   RAM slot #3         RAM slot #3
+DRAM    empty  0   RAM slot #4         RAM slot #4
+DRAM    empty  0   RAM slot #5         RAM slot #5
+DRAM    empty  0   RAM slot #6         RAM slot #6
+DRAM    empty  0   RAM slot #7         RAM slot #7
+DRAM    empty  0   RAM slot #8         RAM slot #8
+DRAM    empty  0   RAM slot #9         RAM slot #9
+DRAM    empty  0   RAM slot #10        RAM slot #10
+DRAM    empty  0   RAM slot #11        RAM slot #11
+DRAM    empty  0   RAM slot #12        RAM slot #12
+DRAM    empty  0   RAM slot #13        RAM slot #13
+DRAM    empty  0   RAM slot #14        RAM slot #14
+
+==== On-Board Devices =====================================
+VMware SVGA II
+ES1371
+
+==== Upgradeable Slots ====================================
+
+ID  Status    Type             Description
+--- --------- ---------------- ----------------------------
+0   unknown   ISA              ISA Slot J8
+0   unknown   ISA              ISA Slot J9
+0   unknown   ISA              ISA Slot J10
+1   in use    PCI              PCI Slot J11
+2   in use    PCI              PCI Slot J12
+3   in use    PCI              PCI Slot J13
+4   available PCI              PCI Slot J14

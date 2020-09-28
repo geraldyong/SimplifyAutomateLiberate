@@ -1,0 +1,9 @@
+4294967295	0	cksum.txt
+2732072542	512	dir1
+802783398	512	dir2
+2748115301	63	mon_disk_full.cfg
+2301254331	678	mon_disk_full.ksh
+4274724155	807	mon_disk_full2.ksh
+2970086352	827	mon_swap_full.ksh
+3006566457	1191	mon_swap_full2.ksh
+2748813723	286	utl_diff_files.ksh
