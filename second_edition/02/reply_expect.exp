@@ -1,0 +1,15 @@
+#!/usr/local/bin/expect
+
+spawn ./ask_userinfo.ksh
+
+while 1 {
+  expect {
+    "userid entered was" {
+      exit 0
+    } userid {
+      send "geraldy\r"
+    } email {
+      send "gerald@hinchsoft.com\r"
+    }
+  }
+}

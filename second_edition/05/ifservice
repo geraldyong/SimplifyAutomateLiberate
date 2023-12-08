@@ -1,0 +1,12 @@
+#!/bin/ksh
+
+# Script to check if service is active.
+
+MOUNT_PT=/export/home
+
+if [ `df -k | grep "${MOUNT_PT}" | wc -l | tr -d ' '` -gt 0 ]; then
+  exit 0
+else
+  exit 1
+fi
+

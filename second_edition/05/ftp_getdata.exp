@@ -1,0 +1,49 @@
+#!/usr/local/bin/expect
+
+# Set global variables.
+set ftphost "solaris1"
+set ftpfile "data.txt"
+
+# Spawn an FTP process.
+spawn "ftp"
+
+# Open up a connection to the remote host.
+send "open $ftphost\r"
+while true {
+  expect {
+    "Connected to $ftphost" {
+      puts "Connection to $ftphost started."
+    }
+    "Name " {
+      send "geraldy\r"
+    }
+    "Password:" {
+      send "trigil\r"
+    }
+    "ftp> " {
+      break 
+    }
+  }
+}
+
+# Perform file transfer.
+send "bin\r"
+send "hash\r"
+send "prompt\r"
+send "lcd /tmp\r"
+send "cd scripts\r"
+send "mget $ftpfile\r"
+
+while true {
+  expect {
+    "bytes received" {
+      puts "File $ftpfile succesfully transferred.\n"
+      send "quit\r"
+    }
+    "Goodbye." {
+      puts "Connection terminated.\n"
+      break
+    }
+  }
+}
+

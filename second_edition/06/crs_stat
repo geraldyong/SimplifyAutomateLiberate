@@ -1,0 +1,17 @@
+#!/bin/ksh
+
+echo "HA Resource                                    Target     State           
+-----------                                    ------     -----            
+ora.CONFP.CONFPA.inst                          ONLINE     ONLINE on dbserver1a
+ora.CONFP.CONFPB.inst                          ONLINE     ONLINE on dbserver1b
+ora.CONFP.db                                   ONLINE     ONLINE on dbserver1a
+ora.dbserver1a.ASM1.asm                        ONLINE     ONLINE on dbserver1a
+ora.dbserver1a.LISTENER_DBSERVER1A.lsnr        ONLINE     ONLINE on dbserver1a
+ora.dbserver1a.gsd                             ONLINE     ONLINE on dbserver1a
+ora.dbserver1a.ons                             ONLINE     ONLINE on dbserver1a
+ora.dbserver1a.vip                             ONLINE     ONLINE on dbserver1a
+ora.dbserver1b.ASM2.asm                        ONLINE     ONLINE on dbserver1b
+ora.dbserver1b.LISTENER_DBSERVER1B.lsnr        ONLINE     ONLINE on dbserver1b
+ora.dbserver1b.gsd                             ONLINE     ONLINE on dbserver1b
+ora.dbserver1b.ons                             ONLINE     ONLINE on dbserver1b
+ora.dbserver1b.vip                             ONLINE     ONLINE on dbserver1b"

@@ -1,0 +1,3 @@
+CRITICAL: Service ora.CONFP.CONFPA.inst expected state is now ONLINE (previously OFFLINE).
+CRITICAL: Service ora.CONFP.db curr state is now ONLINE (previously OFFLINE).
+CRITICAL: Service ora.dbserver1a.ASM1.asm curr state is now ONLINE (previously OFFLINE).
